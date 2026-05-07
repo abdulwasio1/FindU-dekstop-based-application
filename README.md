@@ -199,7 +199,7 @@ mvnw.cmd clean javafx:run
 
 ## Demo
 
-[Watch on YouTube](https://www.youtube.com/watch?v=your-link-here)
+[Watch on YouTube](https://youtu.be/F3M9oTeoQR8?si=NJgd9-qANOm2UxSx)
 
 ---
 
