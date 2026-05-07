@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="1290.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lost_and_found.reportController">
+   <children>
+      <Label alignment="CENTER" layoutX="242.0" layoutY="26.0" prefHeight="28.0" prefWidth="1042.0" text="Report an Item">
+         <font>
+            <Font name="Verdana" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="240.0" layoutY="68.0" opacity="0.77" prefHeight="20.0" prefWidth="1048.0" text="Help us reunite lost items with their owners. Please provide as much">
+         <font>
+            <Font name="Franklin Gothic Book" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="236.0" layoutY="84.0" opacity="0.77" prefHeight="28.0" prefWidth="1049.0" text="detail as possible to speed up the process">
+         <font>
+            <Font name="Franklin Gothic Book" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="633.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/square.png" />
+         </image>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.10980392247438431" green="0.1411764770746231" blue="0.1882352977991104" opacity="0.8600000143051147" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="385.0" layoutY="135.33333333333334" prefHeight="522.0" prefWidth="740.0" style="-fx-background-color: white; -fx-background-radius: 15;" AnchorPane.bottomAnchor="50.0" AnchorPane.topAnchor="135.33333333333334">
+         <children>
+            <ImageView fitHeight="13.0" fitWidth="18.0" layoutX="85.0" layoutY="149.0" nodeOrientation="INHERIT" opacity="0.54" pickOnBounds="true" preserveRatio="true" translateY="2.0">
+               <image>
+                  <Image url="@icons/price-tag%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="13.0" fitWidth="18.0" layoutX="95.0" layoutY="159.0" nodeOrientation="INHERIT" opacity="0.54" pickOnBounds="true" preserveRatio="true" translateX="-10.0" translateY="59.0">
+               <image>
+                  <Image url="@icons/map-pin.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="238.0" layoutY="13.0" prefHeight="47.0" prefWidth="292.0" spacing="5.0" style="-fx-background-color: #F1F5F9; -fx-background-radius: 13;" translateX="222.0" translateY="154.0">
+         <children>
+            <Button id="itemTypeButtons" fx:id="lost" mnemonicParsing="false" onAction="#setButtonTypeLost" prefHeight="39.0" prefWidth="139.0" stylesheets="@styleLogin.css" text="LOST">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Button>
+            <Button id="itemTypeButtons" fx:id="found" layoutX="11.0" layoutY="11.0" mnemonicParsing="false" onAction="#setButtonTypeFound" prefHeight="39.0" prefWidth="139.0" stylesheets="@styleLogin.css" text="FOUND">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <TextField fx:id="nameField" layoutX="232.0" layoutY="124.0" prefHeight="30.0" prefWidth="290.0" promptText="eg. Blue Iphone 13 Case" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-border-color: #CDCDCD; -fx-border-radius: 10; -fx-cursor: type;" translateX="229.0" translateY="154.0">
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="locationField" layoutX="231.0" layoutY="191.0" prefHeight="30.0" prefWidth="290.0" promptText="Where was item lost/found?" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-border-color: #CDCDCD; -fx-border-radius: 10; -fx-cursor: type;" translateX="229.0" translateY="154.0">
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </TextField>
+      <TextArea id="descField" fx:id="descField" layoutX="228.0" layoutY="259.0" prefHeight="72.0" prefWidth="599.0" promptText="Provide any distinguishing features, color, brand, etc." style="-fx-background-radius: 10; -fx-background-color: white; -fx-background-insets: 0; -fx-border-color: #CDCDCD; -fx-border-radius: 10; -fx-cursor: type;" stylesheets="@styleLogin.css" translateX="229.0" translateY="154.0">
+         <padding>
+            <Insets left="26.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextArea>
+      <TextField fx:id="contactField" layoutX="231.0" layoutY="366.0" prefHeight="30.0" prefWidth="290.0" promptText="Email or Phone Number" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-border-color: #CDCDCD; -fx-border-radius: 10; -fx-cursor: type;" translateX="229.0" translateY="154.0">
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </TextField>
+      <Button layoutX="231.0" layoutY="423.0" mnemonicParsing="false" onAction="#submit" prefHeight="30.0" prefWidth="602.0" style="-fx-background-color: #26A5F5; -fx-background-radius: 30; -fx-cursor: Hand;" text="Submit Report" textFill="WHITE" translateX="229.0" translateY="154.0">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="231.0" layoutY="98.0" text="Item Name" translateX="229.0" translateY="154.0" />
+      <Label layoutX="231.0" layoutY="167.0" text="Location" translateX="229.0" translateY="154.0" />
+      <Label layoutX="231.0" layoutY="234.0" text="Description" translateX="229.0" translateY="154.0" />
+      <Label layoutX="231.0" layoutY="343.0" text="Contact Information" translateX="229.0" translateY="154.0" />
+      <Label layoutX="542.0" layoutY="98.0" text="Category" translateX="229.0" translateY="154.0" />
+      <Label fx:id="dateLabel" layoutX="542.0" layoutY="167.0" text="Date Lost" translateX="229.0" translateY="154.0" />
+      <Label fx:id="imgLabel" layoutX="542.0" layoutY="343.0" text="Image Upload (if have)" translateX="229.0" translateY="154.0" />
+      <ChoiceBox fx:id="categoryChoice" layoutX="542.0" layoutY="123.0" prefHeight="30.0" prefWidth="290.0" style="-fx-background-color: WHITE; -fx-background-radius: 10; -fx-border-color: #CDCDCD; -fx-border-radius: 10;" translateX="229.0" translateY="154.0">
+         <padding>
+            <Insets left="30.0" />
+         </padding></ChoiceBox>
+      <DatePicker id="dateField" fx:id="reportDate" layoutX="542.0" layoutY="191.0" prefHeight="30.0" prefWidth="290.0" style="-fx-background-insets: 0; -fx-background-color: wHITE; -fx-background-radius: 10; -fx-border-color: #CDCDCD; -fx-border-radius: 10; -fx-cursor: type;" stylesheets="@styleLogin.css" translateX="229.0" translateY="154.0">
+         <padding>
+            <Insets left="28.0" />
+         </padding>
+      </DatePicker>
+      <Label layoutX="292.0" layoutY="98.0" text="*" textFill="RED" translateX="229.0" translateY="154.0" />
+      <Label layoutX="592.0" layoutY="97.0" text="*" textFill="RED" translateX="229.0" translateY="154.0" />
+      <Label layoutX="278.0" layoutY="166.0" text="*" textFill="RED" translateX="229.0" translateY="154.0" />
+      <Label layoutX="339.0" layoutY="342.0" text="*" textFill="RED" translateX="229.0" translateY="154.0" />
+      <ImageView fitHeight="13.0" fitWidth="18.0" layoutX="780.0" layoutY="354.0" nodeOrientation="INHERIT" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/calendar%20(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="13.0" fitWidth="18.0" layoutX="468.0" layoutY="421.0" nodeOrientation="INHERIT" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/calendar%20(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="467.0" layoutY="526.0" nodeOrientation="INHERIT" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/3095583.png" />
+         </image>
+      </ImageView>
+      <Line endX="200.55555725097656" endY="500.0" fill="WHITE" layoutX="9.0" layoutY="130.0" opacity="0.17" startX="21.77778434753418" startY="500.0" />
+      <ImageView fitHeight="13.0" fitWidth="18.0" layoutX="780.0" layoutY="285.0" nodeOrientation="INHERIT" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/category.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER_LEFT" layoutX="770.0" layoutY="509.0" prefHeight="50.0" prefWidth="520.0" spacing="10.0">
+         <Button mnemonicParsing="false" onAction="#browseImage" prefHeight="30.0" prefWidth="39.0" style="-fx-background-color: #26A5F5; -fx-background-radius: 8; -fx-text-fill: white; -fx-cursor: hand;">
+            <font>
+               <Font name="Verdana" size="11.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@icons/up_17217119.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+         <TextField fx:id="imageItem" editable="false" prefHeight="30.0" prefWidth="177.0" promptText="No file chosen" style="-fx-background-color: transparent; -fx-background-radius: 8; -fx-border-color: #CDCDCD; -fx-border-radius: 8;" />
+         <ImageView fx:id="previewImage" fitHeight="45.0" fitWidth="45.0" preserveRatio="true" />
+      </HBox>
+      <AnchorPane prefHeight="687.0" prefWidth="235.0" style="-fx-background-color: WHITE;">
+         <children>
+            <VBox layoutX="13.0" prefHeight="689.0" prefWidth="211.0" style="-fx-background-color: white;" stylesheets="@styleLogin.css">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/Red_Black_Typography_Nine_Brand_Logo__1_-removebg-preview.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="32.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label fx:id="usernameLabel" alignment="CENTER" prefHeight="55.0" prefWidth="214.0" text="USER NAME">
+                     <font>
+                        <Font name="Yu Gothic UI Semibold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="home" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#clickHome" prefHeight="40.0" prefWidth="215.0" style="-fx-background-color: white;" text="Home" textFill="#3434ff">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/dash.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="allItems" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickAllItems" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: transparent;" text="All Items" textFill="#3434ff">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/list.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="reportItem" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="200.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: transparent;" text="Report Item" textFill="#3434ff">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/report.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="matches" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="229.0" mnemonicParsing="false" onAction="#clickMatches" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: transparent;" text="Matches" textFill="#3434ff">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/tick.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="profile" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickProfile" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: transparent;" text="Profile" textFill="#3434ff">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/profile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Region prefHeight="239.0" prefWidth="213.0" />
+                  <Button fx:id="exit" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="288.0" mnemonicParsing="false" onAction="#onClickSignOut" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: transparent;" text="Sign Out" textFill="#3434ff">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/signout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+            <Line endX="200.55555725097656" endY="500.0" fill="WHITE" layoutX="10.0" layoutY="130.0" opacity="0.17" startX="21.77778434753418" startY="500.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="pane" fx:id="pane" prefHeight="321.0" prefWidth="663.0" stylesheets="@styleLogin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lost_and_found.matchViewControl">
+   <children>
+      <Pane layoutX="45.0" layoutY="104.0">
+         <children>
+            <TextField id="matchViewTextField" fx:id="lostItem" editable="false" focusTraversable="false" prefHeight="30.0" prefWidth="269.0" promptText="eg. Blue Iphone 13 Case" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-border-color: #CDCDCD; -fx-border-radius: 10; -fx-cursor: text;">
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </TextField>
+            <ImageView fitHeight="13.0" fitWidth="18.0" layoutX="10.0" layoutY="9.0" nodeOrientation="INHERIT" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/price-tag%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="48.0" layoutY="79.0" text="Lost Item" textFill="#ff3333">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Label>
+      <Pane layoutX="342.0" layoutY="104.0">
+         <children>
+            <TextField id="matchViewTextField" fx:id="foundItem" editable="false" focusTraversable="false" prefHeight="30.0" prefWidth="269.0" promptText="eg. Blue Iphone 13 Case" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-border-color: #CDCDCD; -fx-border-radius: 10; -fx-cursor: text;">
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </TextField>
+            <ImageView fitHeight="13.0" fitWidth="18.0" layoutX="10.0" layoutY="9.0" nodeOrientation="INHERIT" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/price-tag%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="346.0" layoutY="79.0" text="Found Item" textFill="#62995b">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="13.0" fitWidth="18.0" layoutX="55.0" layoutY="181.0" nodeOrientation="INHERIT" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/map-pin.png" />
+         </image>
+      </ImageView>
+      <TextField id="matchViewTextField" fx:id="lostLocation" editable="false" focusTraversable="false" layoutX="44.0" layoutY="173.0" prefHeight="30.0" prefWidth="269.0" promptText="           Where was item lost/found?" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-border-color: #CDCDCD; -fx-border-radius: 10; -fx-cursor: text;">
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </TextField>
+      <Label layoutX="48.0" layoutY="149.0" text="Lost Location" textFill="#ff3333">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="13.0" fitWidth="18.0" layoutX="354.0" layoutY="180.0" nodeOrientation="INHERIT" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/map-pin.png" />
+         </image>
+      </ImageView>
+      <TextField id="matchViewTextField" fx:id="foundLocation" editable="false" focusTraversable="false" layoutX="343.0" layoutY="172.0" prefHeight="30.0" prefWidth="269.0" promptText="Where was item lost/found?" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-border-color: #CDCDCD; -fx-border-radius: 10; -fx-cursor: text;">
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </TextField>
+      <Label layoutX="347.0" layoutY="148.0" text="Found Location" textFill="#62995b">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Label>
+      <TextField id="matchViewTextField" fx:id="lostContact" editable="false" focusTraversable="false" layoutX="44.0" layoutY="240.0" prefHeight="30.0" prefWidth="269.0" promptText="Email or Phone Number" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-border-color: #CDCDCD; -fx-border-radius: 10; -fx-cursor: text;">
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </TextField>
+      <Label layoutX="44.0" layoutY="217.0" text="Lost User Contact " textFill="#ff3333">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="52.0" layoutY="247.0" nodeOrientation="INHERIT" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/3095583.png" />
+         </image>
+      </ImageView>
+      <TextField id="matchViewTextField" fx:id="foundContact" editable="false" focusTraversable="false" layoutX="343.0" layoutY="240.0" prefHeight="30.0" prefWidth="269.0" promptText="Email or Phone Number" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-border-color: #CDCDCD; -fx-border-radius: 10; -fx-cursor: text;">
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </TextField>
+      <Label layoutX="343.0" layoutY="217.0" text="Found User Contact " textFill="#62995b">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="351.0" layoutY="247.0" nodeOrientation="INHERIT" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/3095583.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="597.0" layoutY="5.0" mnemonicParsing="false" onAction="#closeView" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/minus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="47.0" layoutY="31.0" text="Matching Information" textFill="#7124ff">
+         <font>
+            <Font name="Verdana" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

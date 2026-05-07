@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="609.0" prefWidth="1290.0" stylesheets="@styleLogin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lost_and_found.matchControl">
+   <children>
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutX="260.0" layoutY="121.0" prefHeight="525.0" prefWidth="1007.0" stylesheets="@styleLogin.css">
+         <content>
+            <VBox fx:id="matchBox" prefHeight="520.0" prefWidth="978.0" spacing="10.0">
+               <padding>
+                  <Insets left="7.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Label fx:id="emptyDisplay" alignment="CENTER" layoutX="588.0" layoutY="320.0" prefHeight="26.0" prefWidth="467.0" text="Nothing to display" translateX="-30.0" translateY="22.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="266.0" layoutY="67.0" opacity="0.59" stylesheets="@styleLogin.css" text="Browse all lost and found items reported on campus">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="263.0" layoutY="34.0" prefHeight="30.0" prefWidth="292.0" stylesheets="@styleLogin.css" text="All Reported Items">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="-1.0" prefHeight="687.0" prefWidth="235.0" style="-fx-background-color: WHITE;">
+         <children>
+            <VBox layoutX="13.0" prefHeight="689.0" prefWidth="211.0" style="-fx-background-color: white;" stylesheets="@styleLogin.css">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/Red_Black_Typography_Nine_Brand_Logo__1_-removebg-preview.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="32.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label fx:id="usernameLabel" alignment="CENTER" prefHeight="55.0" prefWidth="214.0" text="USER NAME">
+                     <font>
+                        <Font name="Yu Gothic UI Semibold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="home" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#clickHome" prefHeight="40.0" prefWidth="215.0" style="-fx-background-color: white;" text="Home" textFill="#3434ff">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/dash.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="allItems" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickAllItems" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: transparent;" text="All Items" textFill="#3434ff">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/list.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="reportItem" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickReport" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: transparent;" text="Report Item" textFill="#3434ff">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/report.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="matches" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="229.0" mnemonicParsing="false" onAction="#clickMatch" prefHeight="40.0" prefWidth="217.0" style="-fx-background-color: transparent;" text="Matches" textFill="#3434ff">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/tick.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="profile" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickProfile" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: transparent;" text="Profile" textFill="#3434ff">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/profile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Region prefHeight="239.0" prefWidth="213.0" />
+                  <Button fx:id="exit" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="288.0" mnemonicParsing="false" onAction="#clickSignOut" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: transparent;" text="Sign Out" textFill="#3434ff">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/signout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+            <Line endX="200.55555725097656" endY="500.0" fill="WHITE" layoutX="10.0" layoutY="130.0" opacity="0.17" startX="21.77778434753418" startY="500.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
