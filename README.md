@@ -202,7 +202,7 @@ mvnw.cmd clean javafx:run
 ## Author
 
 **Abdul Wasio**
-[GitHub](https://github.com/username) · [LinkedIn](https://linkedin.com/in/username)
+[GitHub](https://github.com/abdulwasio1) · [LinkedIn](https://www.linkedin.com/in/abdul-wasio-15750327a/)
 
 ---
 
