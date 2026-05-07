@@ -123,6 +123,30 @@ src/main/java/com/example/lost_and_found/
     ├── manageUsersAdmin.java       # User management
     ├── matchViewAdminControl.java  # Match detail (admin)
     └── allItemDisplayControl.java  # Item browser
+
+UI FILES
+
+src/main/resources/com/example/lost_and_found/
+│
+├── login.fxml
+├── register.fxml
+├── profile.fxml
+├── userDashboard.fxml
+├── adminDash.fxml
+├── adminItems.fxml
+├── adminMatch.fxml
+├── adminProfile.fxml
+├── allItems.fxml
+├── matches.fxml
+├── viewMatch.fxml
+├── editMatchAdmin.fxml
+├── editUser.fxml
+├── usersAdmin.fxml
+├── report.fxml
+│
+├── styleLogin.css             → CSS styling
+├── backgroundImage.jpg        → UI background
+└── icons/                     → All UI icons (buttons, menus, etc.)
 ```
 
 ---
@@ -185,17 +209,6 @@ mvnw.cmd clean javafx:run
 - Images stored locally, not in the cloud
 - Matching is text-based — no AI/vector embeddings yet
 - No email notifications when a match is found
-
----
-
-## Roadmap
-
-- [ ] REST API backend (Spring Boot)
-- [ ] Web frontend (React)
-- [ ] Email/SMS notifications on match found
-- [ ] Cloud image storage (AWS S3)
-- [ ] Semantic matching using sentence embeddings
-- [ ] Mobile app (Android/iOS)
 
 ---
 
